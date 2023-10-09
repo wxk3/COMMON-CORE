@@ -1,29 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/06 16:42:31 by gonferna          #+#    #+#             */
-/*   Updated: 2023/10/09 14:28:27 by gonferna         ###   ########.fr       */
+/*   Created: 2023/10/09 14:27:58 by gonferna          #+#    #+#             */
+/*   Updated: 2023/10/09 15:27:59 by gonferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *arr, int c, size_t n)
+int	ft_atoi(const char *nptr)
 {
-	size_t	i;
+	int	i;
+	int	signal;
+	int	result;
 
 	i = 0;
-	while (i < n)
+	signal = 1;
+	result = 0;
+	while (nptr[i] >= 9 && nptr[i] <= 13 || nptr[i] == ' ')
 	{
-		if (((unsigned char *)s)[i] == (unsigned char)c)
-		{
-			return ((void *)s + i);
-		}
 		i++;
 	}
-	return (NULL);
+	if (nptr[i] == '-')
+	{
+		signal = -1;
+		i++;
+	}
+	else if (nptr[i] == '+')
+		i++;
+	while (nptr[i] >= '0' && nptr[i] <= '9')
+	{
+		result = result * 10 + (nptr[i] - '0');
+		i++;
+	}
+	return (signal * result);
 }

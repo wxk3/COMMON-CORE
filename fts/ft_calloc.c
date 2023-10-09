@@ -1,29 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/06 16:42:31 by gonferna          #+#    #+#             */
-/*   Updated: 2023/10/09 14:28:27 by gonferna         ###   ########.fr       */
+/*   Created: 2023/10/09 15:12:09 by gonferna          #+#    #+#             */
+/*   Updated: 2023/10/09 15:22:38 by gonferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *arr, int c, size_t n)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	size_t	i;
+	size_t totalsize;
+	void *result;
 
-	i = 0;
-	while (i < n)
+	totalsize = nmemb * size;
+	result = malloc(totalsize);
+
+	if (result == NULL)
 	{
-		if (((unsigned char *)s)[i] == (unsigned char)c)
-		{
-			return ((void *)s + i);
-		}
-		i++;
+		return (NULL);
 	}
-	return (NULL);
+	if (nmemb == 0 || size == 0)
+	{
+		return (result);
+	}
+	ft_memset(result, 0, totalsize);
+	return (result);
 }
