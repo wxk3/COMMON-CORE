@@ -6,7 +6,7 @@
 /*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 15:22:21 by gonferna          #+#    #+#             */
-/*   Updated: 2023/10/09 16:05:33 by gonferna         ###   ########.fr       */
+/*   Updated: 2023/10/10 13:14:42 by gonferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*strdup(const char *s)
 {
-	char *duplicate;
+	char	*duplicate;
 
 	duplicate = malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (duplicate == NULL)

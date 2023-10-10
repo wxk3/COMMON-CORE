@@ -6,7 +6,7 @@
 /*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 15:12:09 by gonferna          #+#    #+#             */
-/*   Updated: 2023/10/09 15:22:38 by gonferna         ###   ########.fr       */
+/*   Updated: 2023/10/10 13:15:29 by gonferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,11 @@
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	size_t totalsize;
-	void *result;
+	size_t	totalsize;
+	void	*result;
 
 	totalsize = nmemb * size;
 	result = malloc(totalsize);
-
 	if (result == NULL)
 	{
 		return (NULL);
