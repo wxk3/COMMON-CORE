@@ -6,7 +6,7 @@
 /*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 16:47:42 by gonferna          #+#    #+#             */
-/*   Updated: 2023/10/06 17:30:28 by gonferna         ###   ########.fr       */
+/*   Updated: 2023/10/11 19:03:09 by gonferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,10 @@ char	*ft_strchr(const char *str, int c)
 			return ((char *)&str[i]);
 		}
 		i++;
+	}
+	if (str[i] == ((char)c))
+	{
+		return ((char *)str + i);
 	}
 	return (NULL);
 }

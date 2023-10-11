@@ -6,9 +6,11 @@
 /*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 15:57:23 by gonferna          #+#    #+#             */
-/*   Updated: 2023/10/10 16:40:55 by gonferna         ###   ########.fr       */
+/*   Updated: 2023/10/11 18:29:37 by gonferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 static int	ft_wordcount(char const *s, char c)
 {
@@ -19,7 +21,7 @@ static int	ft_wordcount(char const *s, char c)
 	count = 0;
 	while (s[i] != '\0')
 	{
-		if ((s[i] != c && s[i + 1] == c || s[i + 1] == '\0'))
+		if (((s[i] != c && s[i + 1] == c) || s[i + 1] == '\0'))
 		{
 			count++;
 		}

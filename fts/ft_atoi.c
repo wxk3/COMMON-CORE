@@ -6,7 +6,7 @@
 /*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 14:27:58 by gonferna          #+#    #+#             */
-/*   Updated: 2023/10/09 15:27:59 by gonferna         ###   ########.fr       */
+/*   Updated: 2023/10/11 18:27:51 by gonferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_atoi(const char *nptr)
 	i = 0;
 	signal = 1;
 	result = 0;
-	while (nptr[i] >= 9 && nptr[i] <= 13 || nptr[i] == ' ')
+	while ((nptr[i] >= 9 && nptr[i] <= 13) || nptr[i] == ' ')
 	{
 		i++;
 	}
