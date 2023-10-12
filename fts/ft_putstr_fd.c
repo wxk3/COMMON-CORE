@@ -6,7 +6,7 @@
 /*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 16:29:09 by gonferna          #+#    #+#             */
-/*   Updated: 2023/10/11 16:31:27 by gonferna         ###   ########.fr       */
+/*   Updated: 2023/10/12 16:03:32 by gonferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,6 @@ void	ft_putstr_fd(char *s, int fd)
 	while (s[i] != '\0')
 	{
 		write(fd, &s[i], 1);
+		i++;
 	}
 }

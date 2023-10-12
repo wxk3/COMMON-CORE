@@ -6,7 +6,7 @@
 /*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 16:47:22 by gonferna          #+#    #+#             */
-/*   Updated: 2023/10/06 17:28:23 by gonferna         ###   ########.fr       */
+/*   Updated: 2023/10/12 16:10:29 by gonferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,3 @@ int	ft_isalpha(int c)
 		return (0);
 	}
 }
-
-// int main(void)
-// {
-//     char c = '2';
-
-//     printf("%d\n", ft_isalpha(c));
-// }
