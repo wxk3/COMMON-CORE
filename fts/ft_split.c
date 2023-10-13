@@ -6,7 +6,7 @@
 /*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 15:57:23 by gonferna          #+#    #+#             */
-/*   Updated: 2023/10/11 18:29:37 by gonferna         ###   ########.fr       */
+/*   Updated: 2023/10/13 15:31:49 by gonferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static int	ft_wordcount(char const *s, char c)
 	count = 0;
 	while (s[i] != '\0')
 	{
-		if (((s[i] != c && s[i + 1] == c) || s[i + 1] == '\0'))
+		if ((s[i] != c) && (s[i + 1] == c || s[i + 1] == '\0'))
 		{
 			count++;
 		}
@@ -37,7 +37,7 @@ static char	*ft_getword(char const *s, char *str, char c)
 	i = 0;
 	while (s[i] != c && s[i] != '\0')
 		i++;
-	str = (char *)malloc(sizeof(char) * i + 1);
+	str = (char *)malloc(i + 1);
 	if (str == NULL)
 		return (NULL);
 	i = 0;
@@ -58,7 +58,7 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	n = 0;
-	str = (char **)malloc(sizeof(char *) * (ft_wordcount(s, c) + 1));
+	str = malloc(sizeof(char *) * (ft_wordcount(s, c) + 1));
 	if (str == NULL)
 		return (NULL);
 	while (s[i] != '\0')

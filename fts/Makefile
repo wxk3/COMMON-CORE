@@ -6,7 +6,7 @@
 #    By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/11 18:07:00 by gonferna          #+#    #+#              #
-#    Updated: 2023/10/11 18:31:40 by gonferna         ###   ########.fr        #
+#    Updated: 2023/10/13 14:38:58 by gonferna         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,7 @@ $(NAME):
 	ar rs $(NAME) *.o
 
 bonus:
-	cc -c $(FLAGS) $(SRC)
+	cc -c $(FLAGS) $(SRC_B)
 	ar rs $(NAME) *.o
 
 clean:

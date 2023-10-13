@@ -6,13 +6,13 @@
 /*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 15:12:09 by gonferna          #+#    #+#             */
-/*   Updated: 2023/10/12 16:08:38 by gonferna         ###   ########.fr       */
+/*   Updated: 2023/10/13 13:07:27 by gonferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t nmemb, size_t size) //é uma função em C que aloca memória para um número especificado de elementos e inicializa todos eles com zero.
+void	*ft_calloc(size_t nmemb, size_t size)
 {
 	size_t	totalsize;
 	void	*result;
@@ -30,3 +30,5 @@ void	*ft_calloc(size_t nmemb, size_t size) //é uma função em C que aloca mem�
 	ft_memset(result, 0, totalsize);
 	return (result);
 }
+//é uma função em C que aloca memória para um número especificado
+//de elementos e inicializa todos eles com zero.

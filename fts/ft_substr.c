@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/10 13:35:33 by gonferna          #+#    #+#             */
-/*   Updated: 2023/10/10 14:14:49 by gonferna         ###   ########.fr       */
+/*   Created: 2023/10/13 14:39:29 by gonferna          #+#    #+#             */
+/*   Updated: 2023/10/13 14:51:51 by gonferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	i = 0;
 	if (!s)
 		return (NULL);
-	if (len == 0 || start > ft_strlen(s))
+	if (len == 0 || start >= ft_strlen(s))
 	{
 		str = malloc(1);
 		*str = '\0';
