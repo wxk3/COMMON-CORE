@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/09 15:22:21 by gonferna          #+#    #+#             */
-/*   Updated: 2023/10/13 14:56:12 by gonferna         ###   ########.fr       */
+/*   Created: 2023/10/17 14:18:29 by gonferna          #+#    #+#             */
+/*   Updated: 2023/10/17 14:18:32 by gonferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,6 @@ char	*ft_strdup(const char *s)
 	{
 		return (NULL);
 	}
-	ft_memcpy(duplicate, s, ft_strlen((s) + 1));
+	ft_memcpy(duplicate, s, ft_strlen(s) + 1);
 	return (duplicate);
 }

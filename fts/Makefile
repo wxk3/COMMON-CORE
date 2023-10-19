@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/10/11 18:07:00 by gonferna          #+#    #+#              #
-#    Updated: 2023/10/13 14:38:58 by gonferna         ###   ########.fr        #
+#    Created: 2023/10/17 16:52:06 by gonferna          #+#    #+#              #
+#    Updated: 2023/10/17 16:52:08 by gonferna         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,17 +19,19 @@ SRC =	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlen
 		ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_putchar_fd.c \
 		ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_striteri.c
 
-SRC_B = 	ft_lstnew.c ft_lstadd_front.c
+SRC_B = 	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c \
+				ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c \
+				ft_lstclear.c ft_lstiter.c ft_lstmap.c
 
 .PHONY: all compile
 
 all: $(NAME)
 
-$(NAME):
+$(NAME): 
 	cc -c $(FLAGS) $(SRC)
 	ar rs $(NAME) *.o
 
-bonus:
+bonus: 
 	cc -c $(FLAGS) $(SRC_B)
 	ar rs $(NAME) *.o
 
