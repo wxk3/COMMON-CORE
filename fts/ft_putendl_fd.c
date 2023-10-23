@@ -6,14 +6,23 @@
 /*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 16:38:31 by gonferna          #+#    #+#             */
-/*   Updated: 2023/10/17 16:38:34 by gonferna         ###   ########.fr       */
+/*   Updated: 2023/10/23 17:05:52 by gonferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl_fd(char *s, int fd)
+void
+	ft_putendl_fd(char *s, int fd)
 {
-	ft_putstr_fd(s, fd);
-	ft_putchar_fd('\n', fd);
+	const char	nl = '\n';
+
+	write(fd, s, ft_strlen(s));
+	write(fd, &nl, 1);
 }
+/*int	main(void)
+{
+	char s[] = "teste";
+	
+	ft_putendl_fd(s, 1);
+}*/

@@ -6,7 +6,7 @@
 /*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 16:47:29 by gonferna          #+#    #+#             */
-/*   Updated: 2023/10/06 17:31:39 by gonferna         ###   ########.fr       */
+/*   Updated: 2023/10/23 18:11:40 by gonferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,4 +22,16 @@ int	ft_isprint(int c)
 	{
 		return (0);
 	}
+}
+int	main(void)
+{
+	int	a = 'a';
+	int	b = '1';
+	int	c = '.';
+	int	d = 129;
+
+	printf("%i\n", ft_isprint(a));
+	printf("%i\n", ft_isprint(b));
+	printf("%i\n", ft_isprint(c));
+	printf("%i\n", ft_isprint(d));
 }

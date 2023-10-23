@@ -6,7 +6,7 @@
 /*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 15:12:09 by gonferna          #+#    #+#             */
-/*   Updated: 2023/10/13 13:07:27 by gonferna         ###   ########.fr       */
+/*   Updated: 2023/10/23 16:54:16 by gonferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,3 +32,24 @@ void	*ft_calloc(size_t nmemb, size_t size)
 }
 //é uma função em C que aloca memória para um número especificado
 //de elementos e inicializa todos eles com zero.
+int	main(void)
+{
+	char	*array;
+	int		i;
+
+	i = 0;
+    array = (char *)ft_calloc(3, sizeof(char));
+	array[0] = 'T';
+    array[1] = 'e';
+    array[2] = 's';
+    if (array == NULL)
+	{
+        return (1);
+    }
+	while(i < 3)
+	{
+		printf("%c\n", array[i]);
+		i++;
+	}
+	free(array);
+}

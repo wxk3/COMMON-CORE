@@ -6,7 +6,7 @@
 /*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 16:51:56 by gonferna          #+#    #+#             */
-/*   Updated: 2023/10/17 16:51:58 by gonferna         ###   ########.fr       */
+/*   Updated: 2023/10/23 16:57:38 by gonferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ size_t				ft_strlcpy(char *dest, const char *src, size_t destsize);
 size_t				ft_strlen(const char *str);
 t_list				*ft_lstlast(t_list *lst);
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
-						void (*del)(void *));
+ void (*del)(void *));
 t_list				*ft_lstnew(void *content);
 void				ft_bzero(void *s, size_t n);
 void				*ft_calloc(size_t nbl, size_t sizebl);
@@ -62,7 +62,7 @@ void				ft_lstclear(t_list **lst, void (*del)(void *));
 void				ft_lstdelone(t_list *lst, void (*del)(void *));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
 void				*ft_memchr(const void *s, int c, size_t n);
-void				*ft_memcpy(void *dest, const void *src, size_t n);
+void				*ft_memcpy(void *dst, const void *src, size_t n);
 void				*ft_memmove(void *dest, const void *src, size_t n);
 void				*ft_memset(void *s, int c, size_t n);
 void				ft_putchar_fd(char c, int fd);

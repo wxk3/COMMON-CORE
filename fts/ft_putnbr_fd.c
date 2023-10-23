@@ -6,7 +6,7 @@
 /*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 16:38:38 by gonferna          #+#    #+#             */
-/*   Updated: 2023/10/17 16:53:35 by gonferna         ###   ########.fr       */
+/*   Updated: 2023/10/23 17:07:27 by gonferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,4 +34,10 @@ void	ft_putnbr_fd(int n, int fd)
 	{
 		ft_putchar_fd(n + '0', fd);
 	}
+}
+int	main(void)
+{
+	int	n = 123456;
+
+	ft_putnbr_fd(n, 1);
 }

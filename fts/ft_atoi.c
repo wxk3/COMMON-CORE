@@ -6,7 +6,7 @@
 /*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 14:27:58 by gonferna          #+#    #+#             */
-/*   Updated: 2023/10/12 16:11:01 by gonferna         ###   ########.fr       */
+/*   Updated: 2023/10/23 15:40:57 by gonferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,3 +39,11 @@ int	ft_atoi(const char *nptr)
 	}
 	return (signal * result);
 }
+/*int	main(void)
+{
+	const char	*n = "-1234abc56";
+	int	result;
+
+	result = ft_atoi(n);
+	printf("%i\n", result);
+}*/

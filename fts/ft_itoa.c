@@ -6,7 +6,7 @@
 /*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 16:46:08 by gonferna          #+#    #+#             */
-/*   Updated: 2023/10/11 16:15:42 by gonferna         ###   ########.fr       */
+/*   Updated: 2023/10/23 18:16:50 by gonferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,14 +32,7 @@ static int	ft_callen(int nbr)
 static void	ft_getdigit(long n, char *str, int *i)
 {
 	if (n > 9)
-	{
-		ft_getdigit(n / 10, str, i);
-		ft_getdigit(n % 10, str, i);
-	}
-	else
-	{
-		str[(*i)++] = n + 48;
-	}
+	i = 0;
 }
 
 char	*ft_itoa(int n)

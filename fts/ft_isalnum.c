@@ -6,7 +6,7 @@
 /*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 16:47:19 by gonferna          #+#    #+#             */
-/*   Updated: 2023/10/12 16:10:34 by gonferna         ###   ########.fr       */
+/*   Updated: 2023/10/23 16:25:10 by gonferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,3 +23,13 @@ int	ft_isalnum(int c)
 		return (0);
 	}
 }
+/*int	main(void)
+{
+	int	a = 'a';
+	int	b = '1';
+	int	c = '.';
+
+	printf("%i\n", ft_isalnum(a));
+	printf("%i\n", ft_isalnum(b));
+	printf("%i\n", ft_isalnum(c));
+}*/
