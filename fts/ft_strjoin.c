@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: goncaloferreira <goncaloferreira@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 14:15:04 by gonferna          #+#    #+#             */
-/*   Updated: 2023/10/10 14:23:32 by gonferna         ###   ########.fr       */
+/*   Updated: 2023/10/25 19:12:17 by goncaloferr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,14 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		j++;
 	}
 	str[i] = '\0';
-	return (str); 
+	return (str);
 }
+/*int	main(void)
+{
+	char	s1[] = "Teste1";
+	char	s2[] = "Teste2";
+	char	*str;
+
+	str = ft_strjoin(s1, s2);
+	printf("%s\n", str);
+}*/

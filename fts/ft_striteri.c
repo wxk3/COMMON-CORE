@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: goncaloferreira <goncaloferreira@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 16:16:46 by gonferna          #+#    #+#             */
-/*   Updated: 2023/10/11 16:23:42 by gonferna         ###   ########.fr       */
+/*   Updated: 2023/10/25 18:51:47 by goncaloferr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,3 +23,17 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		n++;
 	}
 }
+
+/*void print_string(unsigned int index, char *c)
+{
+    printf("Caractere na posição %u: %c\n", index, *c);
+}
+
+int main(void)
+{
+    char s[] = "teste teste TESTE";
+
+    ft_striteri(s, print_string);
+
+    return 0;
+}*/

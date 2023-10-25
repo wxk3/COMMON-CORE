@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: goncaloferreira <goncaloferreira@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 16:38:43 by gonferna          #+#    #+#             */
-/*   Updated: 2023/10/17 16:46:46 by gonferna         ###   ########.fr       */
+/*   Updated: 2023/10/24 17:25:39 by goncaloferr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,3 +23,8 @@ void	ft_putstr_fd(char *s, int fd)
 		i++;
 	}
 }
+/*int	main(void)
+{
+	char	s[] = "olha a string";
+	ft_putstr_fd(s, 1);
+}*/

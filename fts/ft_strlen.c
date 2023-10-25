@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: goncaloferreira <goncaloferreira@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 16:48:01 by gonferna          #+#    #+#             */
-/*   Updated: 2023/10/06 17:29:49 by gonferna         ###   ########.fr       */
+/*   Updated: 2023/10/25 20:13:25 by goncaloferr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,3 +24,12 @@ size_t	ft_strlen(const char *str)
 	}
 	return (i);
 }
+/*int	main(void)
+{
+	char	str[] = "Qual o tamanho desta string?";
+	int	i;
+
+	i = ft_strlen(str);
+	printf("%s\n", str);
+	printf("O tamanho é: %d\n", i);
+}*/

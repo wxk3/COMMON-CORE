@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: goncaloferreira <goncaloferreira@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 16:47:29 by gonferna          #+#    #+#             */
-/*   Updated: 2023/10/23 18:11:40 by gonferna         ###   ########.fr       */
+/*   Updated: 2023/10/24 16:57:49 by goncaloferr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_isprint(int c)
 		return (0);
 	}
 }
-int	main(void)
+/*int	main(void)
 {
 	int	a = 'a';
 	int	b = '1';
@@ -34,4 +34,4 @@ int	main(void)
 	printf("%i\n", ft_isprint(b));
 	printf("%i\n", ft_isprint(c));
 	printf("%i\n", ft_isprint(d));
-}
+}*/

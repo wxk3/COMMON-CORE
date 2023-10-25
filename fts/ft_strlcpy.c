@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: goncaloferreira <goncaloferreira@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 16:47:58 by gonferna          #+#    #+#             */
-/*   Updated: 2023/10/06 17:29:33 by gonferna         ###   ########.fr       */
+/*   Updated: 2023/10/25 20:25:34 by goncaloferr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,8 @@
 size_t	ft_strlcpy(char *dest, const char *src, size_t n)
 {
 	size_t	i;
-	size_t	len;
 
-	len = 0;
 	i = 0;
-	while (src[len] != '\0')
-		len++;
 	if (n > 0)
 	{
 		while (i < n - 1 && src[i] != '\0')
@@ -39,12 +35,14 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t n)
 	}
 	return (i);
 }
-// int main(void)
-// {
-//     char src[] = "Hello world!";
-//     char dest[20];
+/*int main(void)
+{
+    char src[] = "Hello world!";
+    char dest[20];
+	size_t	i;
 
-//     ft_strlcpy(dest, src, 10);
+    i = ft_strlcpy(dest, src, 10);
 
-//     printf("%s\n", dest);
-// }
+    printf("A String de destino é: %s\n", dest);
+	printf("O tamanho da String de origem é: %zu\n", i);
+}*/

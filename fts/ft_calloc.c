@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: goncaloferreira <goncaloferreira@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 15:12:09 by gonferna          #+#    #+#             */
-/*   Updated: 2023/10/23 16:54:16 by gonferna         ###   ########.fr       */
+/*   Updated: 2023/10/25 00:57:47 by goncaloferr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 }
 //é uma função em C que aloca memória para um número especificado
 //de elementos e inicializa todos eles com zero.
-int	main(void)
+/*int	main(void)
 {
 	char	*array;
 	int		i;
@@ -52,4 +52,4 @@ int	main(void)
 		i++;
 	}
 	free(array);
-}
+}*/

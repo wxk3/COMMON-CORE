@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: goncaloferreira <goncaloferreira@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 16:42:31 by gonferna          #+#    #+#             */
-/*   Updated: 2023/10/11 18:19:54 by gonferna         ###   ########.fr       */
+/*   Updated: 2023/10/25 01:04:46 by goncaloferr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,3 +27,17 @@ void	*ft_memchr(const void *arr, int c, size_t n)
 	}
 	return (NULL);
 }
+/*int main(void)
+{
+    char arr[] = "foi, um, teste!";
+    char search = 'a';
+    size_t len = sizeof(arr) - 1;
+
+    void *result = ft_memchr(arr, search, len);
+    if (result != NULL) {
+        printf("'%c' encontrado na posição %zu\n", search,
+		 (size_t)((char *)result - arr));
+    } else {
+        printf("'%c' não encontrado na string.\n", search);
+    }
+}*/

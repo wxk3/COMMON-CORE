@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: goncaloferreira <goncaloferreira@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 14:39:29 by gonferna          #+#    #+#             */
-/*   Updated: 2023/10/13 14:51:51 by gonferna         ###   ########.fr       */
+/*   Updated: 2023/10/25 21:51:00 by goncaloferr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,3 +39,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	str[i] = '\0';
 	return (str);
 }
+/*int	main(void)
+{
+	char	s[] = "String de teste";
+	char	*str;
+
+	str = ft_substr(s, 5, 6);
+	printf("O resultado da função é: %s\n", str);
+}*/

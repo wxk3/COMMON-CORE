@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: goncaloferreira <goncaloferreira@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 16:48:18 by gonferna          #+#    #+#             */
-/*   Updated: 2023/10/11 18:52:27 by gonferna         ###   ########.fr       */
+/*   Updated: 2023/10/24 17:43:48 by goncaloferr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,3 +20,9 @@ int	ft_toupper(int i)
 	}
 	return (i);
 }
+/*int	main(void)
+{
+	int	i = 'a';
+	
+	printf("%c\n", ft_toupper(i));
+}*/

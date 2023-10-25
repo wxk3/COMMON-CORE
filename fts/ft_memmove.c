@@ -3,38 +3,46 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: goncaloferreira <goncaloferreira@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 16:47:38 by gonferna          #+#    #+#             */
-/*   Updated: 2023/10/06 17:31:51 by gonferna         ###   ########.fr       */
+/*   Updated: 2023/10/25 01:23:03 by goncaloferr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t n)
 {
-	size_t	i;
+	int	i;
 
-	if (!dst && !src)
-		return (0);
-	i = 0;
-	if ((size_t)dst - (size_t)src < len)
+	if (!dst || !src)
+		return (NULL);
+	if (dst > src)
 	{
-		i = len - 1;
-		while (i < len)
+		i = (int)n - 1;
+		while (i >= 0)
 		{
-			((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
+			*(char *)(dst + i) = *(char *)(src + i);
 			i--;
 		}
 	}
 	else
 	{
-		while (i < len)
+		i = 0;
+		while (i < (int)n)
 		{
-			((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
+			*(char *)(dst + i) = *(char *)(src + i);
 			i++;
 		}
 	}
 	return (dst);
 }
+/*int	main(void)
+{
+	char dst[12] = "Testeeghghg";
+	const char src[] = "Tesee";
+
+	ft_memmove(dst, src, 4);
+	printf("%s\n", dst);
+}*/

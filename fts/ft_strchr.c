@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: goncaloferreira <goncaloferreira@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 16:47:42 by gonferna          #+#    #+#             */
-/*   Updated: 2023/10/17 14:25:07 by gonferna         ###   ########.fr       */
+/*   Updated: 2023/10/25 17:04:52 by goncaloferr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,3 +31,11 @@ char	*ft_strchr(const char *str, int c)
 	}
 	return (NULL);
 }
+/*int	main(void)
+{
+	char	s[] = "This is just a script";
+	
+	printf("%s\n", ft_strchr(s, 'j')); 
+//a funçao vai procurar um caracter igual a 'j' e caso encontre,
+//vai criar um pointer para esse ponto e retornar a string a partir daí
+}*/

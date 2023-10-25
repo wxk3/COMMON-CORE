@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: goncaloferreira <goncaloferreira@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 16:47:34 by gonferna          #+#    #+#             */
-/*   Updated: 2023/10/06 17:28:49 by gonferna         ###   ########.fr       */
+/*   Updated: 2023/10/24 17:30:48 by goncaloferr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,3 +28,11 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
+/*int	main(void)
+{
+	char dst[12] = "Testeeghghg";
+	const char src[] = "Tesee";
+
+	ft_memcpy(dst, src, 4);
+	printf("%s\n", dst);
+}*/

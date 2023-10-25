@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: goncaloferreira <goncaloferreira@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 16:47:40 by gonferna          #+#    #+#             */
-/*   Updated: 2023/10/23 18:16:07 by gonferna         ###   ########.fr       */
+/*   Updated: 2023/10/24 17:40:41 by goncaloferr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,3 +23,10 @@ void	*ft_memset(void *s, int c, size_t n)
 		ptr[i++] = (unsigned char)c;
 	return (s);
 }
+/*int	main(void)
+{
+	char	s[10];
+	
+	ft_memset(s, 'A', 5);
+	printf("%s\n", s);
+}*/

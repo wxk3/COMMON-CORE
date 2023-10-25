@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: goncaloferreira <goncaloferreira@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 15:57:23 by gonferna          #+#    #+#             */
-/*   Updated: 2023/10/13 15:31:49 by gonferna         ###   ########.fr       */
+/*   Updated: 2023/10/25 15:07:04 by goncaloferr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,3 +76,17 @@ char	**ft_split(char const *s, char c)
 	str[n] = NULL;
 	return (str);
 }
+/*int	main(void)
+{
+	char	s[] = "Isto é um teste";
+	char	**result;
+	int	i;
+
+	i = 0;
+	result = ft_split(s, ' ');
+	while (result[i] != NULL)
+	{
+		printf("Palavra %d: %s\n", i, result[i]);
+		i++;
+	}
+}*/

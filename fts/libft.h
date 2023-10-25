@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: goncaloferreira <goncaloferreira@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 16:51:56 by gonferna          #+#    #+#             */
-/*   Updated: 2023/10/23 16:57:38 by gonferna         ###   ########.fr       */
+/*   Updated: 2023/10/25 20:43:52 by goncaloferr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char				*ft_strdup(const char *s);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char				*ft_strnstr(const char *haystack, const char *needle,
-						size_t n);
+						size_t len);
 char				*ft_strrchr(const char *s, int c);
 char				*ft_strtrim(char const *s1, char const *set);
 char				*ft_substr(char const *s, unsigned int start, size_t len);
@@ -52,7 +52,7 @@ size_t				ft_strlcpy(char *dest, const char *src, size_t destsize);
 size_t				ft_strlen(const char *str);
 t_list				*ft_lstlast(t_list *lst);
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
- void (*del)(void *));
+						void (*del)(void *));
 t_list				*ft_lstnew(void *content);
 void				ft_bzero(void *s, size_t n);
 void				*ft_calloc(size_t nbl, size_t sizebl);

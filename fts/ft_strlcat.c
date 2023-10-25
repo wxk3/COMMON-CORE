@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: goncaloferreira <goncaloferreira@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 16:47:55 by gonferna          #+#    #+#             */
-/*   Updated: 2023/10/06 17:29:40 by gonferna         ###   ########.fr       */
+/*   Updated: 2023/10/25 19:27:23 by goncaloferr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,3 +39,12 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	dest[len_dest] = '\0';
 	return (res);
 }
+/*int	main(void)
+{
+	char	s1[] = "Teste1";
+	char	s2[] = "Teste2";
+	size_t	res;
+
+	res = ft_strlcat(s1, s2, 10);
+	printf("O tamanho da string é:%zu\n", res);
+}*/

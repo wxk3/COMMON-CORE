@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: goncaloferreira <goncaloferreira@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 14:24:50 by gonferna          #+#    #+#             */
-/*   Updated: 2023/10/10 15:53:39 by gonferna         ###   ########.fr       */
+/*   Updated: 2023/10/25 21:34:53 by goncaloferr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,3 +48,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 	str[i] = '\0';
 	return (str);
 }
+/*int	main(void)
+{
+	char	s[] = "   Isto é um teste  ";
+	char	*str;
+	
+	str = ft_strtrim(s, " ");
+	printf("O resultado da função é: %s\n", str);
+}*/
