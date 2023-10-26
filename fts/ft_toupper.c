@@ -3,22 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: goncaloferreira <goncaloferreira@studen    +#+  +:+       +#+        */
+/*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 16:48:18 by gonferna          #+#    #+#             */
-/*   Updated: 2023/10/24 17:43:48 by goncaloferr      ###   ########.fr       */
+/*   Updated: 2023/10/26 15:45:59 by gonferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int i)
+int	ft_toupper(int c)
 {
-	if (i >= 97 && i <= 122)
+	if (c >= 97 && c <= 122)
 	{
-		i -= 32;
+		c -= 32;
 	}
-	return (i);
+	return (c);
 }
 /*int	main(void)
 {

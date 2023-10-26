@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: goncaloferreira <goncaloferreira@studen    +#+  +:+       +#+        */
+/*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 15:12:09 by gonferna          #+#    #+#             */
-/*   Updated: 2023/10/25 00:57:47 by goncaloferr      ###   ########.fr       */
+/*   Updated: 2023/10/26 15:53:47 by gonferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
