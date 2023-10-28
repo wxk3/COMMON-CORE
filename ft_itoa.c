@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: goncaloferreira <goncaloferreira@studen    +#+  +:+       +#+        */
+/*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 16:46:08 by gonferna          #+#    #+#             */
-/*   Updated: 2023/10/25 00:57:00 by goncaloferr      ###   ########.fr       */
+/*   Updated: 2023/10/28 18:08:29 by gonferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,3 +65,18 @@ char	*ft_itoa(int n)
 	str[i] = '\0';
 	return (str);
 }
+/*int	main(void)
+{
+	int	n = -12345;
+	char	*res = ft_itoa(n);
+	
+	if (res != NULL)
+	{
+		printf("Numero original: %d\n", n);
+		printf("Numero em string: %s\n", res);
+		free(res);
+	}
+	else
+		printf("Erro de memmoria\n");
+	return (0);
+}*/
