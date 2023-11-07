@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: goncaloferreira <goncaloferreira@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 16:10:29 by gonferna          #+#    #+#             */
-/*   Updated: 2023/11/02 16:53:18 by gonferna         ###   ########.fr       */
+/*   Updated: 2023/11/07 17:54:42 by goncaloferr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,10 @@ int		ft_formats(va_list args, const char format)
 		print_length += ft_printchar(va_arg(args, int));
 	else if (format == 's')
 		print_length += ft_printstr(va_arg(args, char *));
+	else if (format == 'd' || format == 'i')
+		print_length += ft_print_d_i(va_arg(args, int));
+	else if (format == 'u')
+		print_length += ft_print_unsigned(va_arg(args, unsigned int));
 	else if (format == 'x' || format == 'X')
 		print_length += ft_print_hex(va_arg(args, unsigned int), format);
 	else if (format == '%')

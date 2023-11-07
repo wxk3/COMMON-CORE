@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_utilities.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: goncaloferreira <goncaloferreira@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 16:22:11 by gonferna          #+#    #+#             */
-/*   Updated: 2023/11/02 16:51:54 by gonferna         ###   ########.fr       */
+/*   Updated: 2023/11/07 18:24:20 by goncaloferr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "libft.h"
 #include <stdio.h>
 
-void	ft_printstr(char *str)
+int	ft_printstr(char *str)
 {
 	int	i;
 	
@@ -56,7 +56,7 @@ void	ft_put_hex(unsigned int	num, const char format)
 	else
 	{
 		if (num <= 9)
-			ft_putchar_fd((num + '0', 1));
+			ft_putchar_fd((num + '0'), 1);
 		else
 		{
 			if (format == 'x')
@@ -80,4 +80,16 @@ int	ft_print_percent(void)
 {
 	write(1, "%", 1);
 	return (1);
+}
+
+int		ft_print_d_i(int n)
+{
+	int		len;
+	char	*num;
+
+	len = 0;
+	num = ft_itoa(n);
+	len = ft_printstr(num);
+	free(num);
+	return (len);
 }
