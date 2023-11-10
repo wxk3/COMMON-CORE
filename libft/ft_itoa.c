@@ -6,7 +6,7 @@
 /*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 16:46:08 by gonferna          #+#    #+#             */
-/*   Updated: 2023/10/28 18:08:29 by gonferna         ###   ########.fr       */
+/*   Updated: 2023/11/10 15:37:49 by gonferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,16 +67,8 @@ char	*ft_itoa(int n)
 }
 /*int	main(void)
 {
-	int	n = -12345;
-	char	*res = ft_itoa(n);
-	
-	if (res != NULL)
-	{
-		printf("Numero original: %d\n", n);
-		printf("Numero em string: %s\n", res);
-		free(res);
-	}
-	else
-		printf("Erro de memmoria\n");
-	return (0);
+	int	n = 12345678;
+	char *str = ft_itoa(n);
+
+	printf("%s\n", str);
 }*/

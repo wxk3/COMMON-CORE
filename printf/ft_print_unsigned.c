@@ -3,17 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_unsigned.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: goncaloferreira <goncaloferreira@studen    +#+  +:+       +#+        */
+/*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/07 16:57:22 by goncaloferr       #+#    #+#             */
-/*   Updated: 2023/11/07 17:43:13 by goncaloferr      ###   ########.fr       */
+/*   Created: 2023/11/10 17:00:27 by gonferna          #+#    #+#             */
+/*   Updated: 2023/11/10 17:24:25 by gonferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include "printf.h"
+#include "ft_printf.h"
 
-int     ft_numlength(unsigned int num)
+int ft_numlength(unsigned int num)
 {
     int     len;
 

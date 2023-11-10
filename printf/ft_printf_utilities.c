@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_utilities.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: goncaloferreira <goncaloferreira@studen    +#+  +:+       +#+        */
+/*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/02 16:22:11 by gonferna          #+#    #+#             */
-/*   Updated: 2023/11/07 18:24:20 by goncaloferr      ###   ########.fr       */
+/*   Created: 2023/11/10 17:00:33 by gonferna          #+#    #+#             */
+/*   Updated: 2023/11/10 17:04:07 by gonferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include "libft.h"
-#include <stdio.h>
 
 int	ft_printstr(char *str)
 {

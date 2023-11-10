@@ -3,23 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: goncaloferreira <goncaloferreira@studen    +#+  +:+       +#+        */
+/*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 16:10:29 by gonferna          #+#    #+#             */
-/*   Updated: 2023/11/08 19:56:47 by goncaloferr      ###   ########.fr       */
+/*   Updated: 2023/11/10 17:03:09 by gonferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 //%c
-int		ft_printchar(int c)
+int	ft_printchar(int c)
 {
 	write(1, &c, 1);
 	return (1);
 }
 
-int		ft_formats(va_list args, const char format)
+int	ft_formats(va_list args, const char format)
 {
 	int		print_length;
 
@@ -35,13 +35,13 @@ int		ft_formats(va_list args, const char format)
 	else if (format == 'u')
 		print_length += ft_print_unsigned(va_arg(args, unsigned int));
 	else if (format == 'x' || format == 'X')
-		print_length += ft_print_hex(va_arg(args, unsigned int), format);
+		print_length += ft_printf_hex(va_arg(args, unsigned int), format);
 	else if (format == '%')
 		print_length += ft_print_percent();
 	return (print_length);
 }
 
-int		ft_printf(const char *str, ...)
+int	ft_printf(const char *str, ...)
 {
 	int		i;
 	va_list	args;

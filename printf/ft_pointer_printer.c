@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_pointer_printer.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: goncaloferreira <goncaloferreira@studen    +#+  +:+       +#+        */
+/*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/06 22:13:40 by goncaloferr       #+#    #+#             */
-/*   Updated: 2023/11/07 18:19:02 by goncaloferr      ###   ########.fr       */
+/*   Created: 2023/11/10 17:00:20 by gonferna          #+#    #+#             */
+/*   Updated: 2023/11/10 17:05:36 by gonferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include "libft.h"
 
-int     ft_ptr_len(uintptr_t num)
+int ft_ptr_len(uintptr_t num)
 {
-    int     len;
+    int len;
 
     len = 0;
     while (num != 0)
@@ -25,7 +25,6 @@ int     ft_ptr_len(uintptr_t num)
     }
     return (len);
 }
-
 void    ft_put_ptr(uintptr_t num)
 {
     if (num >= 16)
