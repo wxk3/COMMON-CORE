@@ -6,7 +6,7 @@
 #    By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/10 15:38:50 by gonferna          #+#    #+#              #
-#    Updated: 2023/11/10 16:58:20 by gonferna         ###   ########.fr        #
+#    Updated: 2023/11/12 16:56:17 by gonferna         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,9 @@ SRCS = ft_printf.c \
 	ft_pointer_printer.c \
 	ft_print_unsigned.c \
 	ft_printf_utilities.c \
+	ft_print_int.c \
+	ft_printchar.c \
+	ft_print_hex.c \
 
 OBJS = $(SRCS:.c=.o)
 
@@ -36,9 +39,9 @@ $(NAME): makelibft $(OBJS)
 clean:
 	@rm -f $(OBJS)
 	@cd $(LIBFTDIR) && make clean
-
+	
 fclean: clean
 	@rm -f $(NAME)
 	@cd $(LIBFTDIR) && make fclean
-
+	
 re: fclean all

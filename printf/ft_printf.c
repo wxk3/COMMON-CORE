@@ -6,18 +6,11 @@
 /*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 16:10:29 by gonferna          #+#    #+#             */
-/*   Updated: 2023/11/10 17:03:09 by gonferna         ###   ########.fr       */
+/*   Updated: 2023/11/12 16:54:49 by gonferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
-//%c
-int	ft_printchar(int c)
-{
-	write(1, &c, 1);
-	return (1);
-}
 
 int	ft_formats(va_list args, const char format)
 {
@@ -31,7 +24,7 @@ int	ft_formats(va_list args, const char format)
 	else if (format == 'p')
 		print_length += ft_pointer_printer(va_arg(args, unsigned long long));
 	else if (format == 'd' || format == 'i')
-		print_length += ft_print_d_i(va_arg(args, int));
+		print_length += ft_print_int(va_arg(args, int));
 	else if (format == 'u')
 		print_length += ft_print_unsigned(va_arg(args, unsigned int));
 	else if (format == 'x' || format == 'X')

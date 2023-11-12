@@ -1,36 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_utilities.c                              :+:      :+:    :+:   */
+/*   ft_print_int.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/10 17:00:33 by gonferna          #+#    #+#             */
-/*   Updated: 2023/11/12 16:48:48 by gonferna         ###   ########.fr       */
+/*   Created: 2023/11/12 15:03:19 by gonferna          #+#    #+#             */
+/*   Updated: 2023/11/12 16:44:48 by gonferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printstr(char *str)
+int	ft_print_int(int n)
 {
-	int	i;
+	unsigned int	len;
+	int				nb;
 
-	i = 0;
-	if (str == NULL)
+	nb = n;
+	len = 1;
+	if (n < 0 && n != -2147483648)
 	{
-		return (0);
+		nb = -n;
+		len++;
 	}
-	while (str[i] != '\0')
+	while (nb > 9)
 	{
-		write(1, &str[i], 1);
-		i++;
+		nb = nb / 10;
+		len++;
 	}
-	return (i);
-}
-
-int	ft_print_percent(void)
-{
-	write(1, "%", 1);
-	return (1);
+	ft_putnbr_fd(n, 1);
+	if (n == -2147483648)
+		return (11);
+	return (len);
 }
