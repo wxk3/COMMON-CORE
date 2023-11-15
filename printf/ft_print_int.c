@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_int.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: goncaloferreira <goncaloferreira@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 15:03:19 by gonferna          #+#    #+#             */
-/*   Updated: 2023/11/12 16:44:48 by gonferna         ###   ########.fr       */
+/*   Updated: 2023/11/15 13:47:49 by goncaloferr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

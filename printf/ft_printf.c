@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: goncaloferreira <goncaloferreira@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 16:10:29 by gonferna          #+#    #+#             */
-/*   Updated: 2023/11/12 16:54:49 by gonferna         ###   ########.fr       */
+/*   Updated: 2023/11/15 13:37:08 by goncaloferr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ int	ft_printf(const char *str, ...)
 			i++;
 		}
 		else
-			print_length += ft_formats(args, str[i]);
+			print_length += ft_printchar(str[i]);
 		i++;
 	}
 	va_end(args);
