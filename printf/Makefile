@@ -5,43 +5,35 @@
 #                                                     +:+ +:+         +:+      #
 #    By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/11/10 15:38:50 by gonferna          #+#    #+#              #
-#    Updated: 2023/11/18 19:02:21 by gonferna         ###   ########.fr        #
+#    Created: 2023/11/26 15:03:13 by gonferna          #+#    #+#              #
+#    Updated: 2023/11/26 15:10:52 by gonferna         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
-LIBFTNAME = libft.a
+
+SRCS =	ft_printf.c ft_utilities.c ft_utilities2.c
+
+OBJS = ${SRCS:.c=.o}
+
 CC = cc
-CFLAGS = -Wall -Werror -Wextra
-LIBFTDIR = ./libft
+CFLAGS = -Wall -Wextra -Werror
+AR = ar rcs
+RM = rm -f
 
-SRCS = ft_printf.c \
-	ft_pointer_printer.c \
-	ft_print_unsigned.c \
-	ft_printf_utilities.c \
-	ft_print_int.c \
-	ft_printchar.c \
-	ft_print_hex.c \
 
-OBJS = $(SRCS:.c=.o)
+all:		${NAME}
 
-all: $(NAME)
+.c.o:
+		@${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
-makelibft:
-	@make -C $(LIBFTDIR)
-	@cp $(LIBFTDIR)/$(LIBFTNAME) .
-	@mv $(LIBFTNAME) $(NAME)
-
-$(NAME): makelibft $(OBJS)
-	@ar -r $(NAME) $(OBJS)
+${NAME}:	${OBJS}
+		@${AR} ${NAME} ${OBJS}
 
 clean:
-	@rm -f $(OBJS)
-	@cd $(LIBFTDIR) && make clean
-	
-fclean: clean
-	@rm -f $(NAME)
-	@cd $(LIBFTDIR) && make fclean
-	
-re: fclean all
+		@${RM} ${OBJS}
+
+fclean:		clean
+		@${RM} ${NAME}
+
+re:		fclean all
