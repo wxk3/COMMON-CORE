@@ -6,7 +6,7 @@
 /*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 15:34:52 by gonferna          #+#    #+#             */
-/*   Updated: 2024/01/29 17:01:01 by gonferna         ###   ########.fr       */
+/*   Updated: 2024/01/30 17:27:33 by gonferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,12 @@
 
 
 # ifndef BUFFER_SIZE
-#  define  BUFFER_SIZE 10
+#  define  BUFFER_SIZE 4
 # endif
 
 
 char    *get_next_line(int fd);
+char    *ft_strjoin(char *line, char *buff);
 
 
 #endif

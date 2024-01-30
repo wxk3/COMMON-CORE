@@ -6,13 +6,13 @@
 /*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 15:34:52 by gonferna          #+#    #+#             */
-/*   Updated: 2024/01/29 17:29:33 by gonferna         ###   ########.fr       */
+/*   Updated: 2024/01/30 17:18:00 by gonferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-int ft_strlen(char *string)
+static int ft_strlen(char *string)
 {
     int i;
 
