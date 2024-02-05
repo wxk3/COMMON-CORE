@@ -6,7 +6,7 @@
 /*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 15:34:52 by gonferna          #+#    #+#             */
-/*   Updated: 2024/01/30 18:16:13 by gonferna         ###   ########.fr       */
+/*   Updated: 2024/02/05 16:01:15 by gonferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,14 +40,21 @@ char    *get_next_line(int fd)
     char        *line;
     int size;
 
-    if (fd < 0)
-        return (NULL);
+    if (fd < 0 || BUFFER_SIZE < 1 || fd >= FOPEN_MAX)
+        return (clean_buff(buff));
     line = NULL;  
     size = 1;
     while (size > 0)
     {
         if (buff[0] == '\0')
             size = read(fd, buff, BUFFER_SIZE);
+        if (size == -1)
+        {
+            free(line);
+            return (clean_buff(buff));
+        }
+        else if (size == 0)
+            break;
         line = ft_strjoin(line, buff);
         if (next_line(buff))
             break;
@@ -55,14 +62,14 @@ char    *get_next_line(int fd)
     return (line);
 }
 
-int main()
-{
+// int main()
+// {
 
-    int fd = open("t.txt", O_RDONLY);
+//     int fd = open("t.txt", O_RDONLY);
    
-    printf("BUFFER_SIZE: %i, fd: %i\n", BUFFER_SIZE, fd);
-    printf("line: %s", get_next_line(fd));
-    printf("line: %s", get_next_line(fd));
-    printf("line: %s", get_next_line(fd));
-    return (0);
-}
+//     printf("BUFFER_SIZE: %i, fd: %i\n", BUFFER_SIZE, fd);
+//     printf("line: %s", get_next_line(fd));
+//     printf("line: %s", get_next_line(fd));
+//     printf("line: %s", get_next_line(fd));
+//     return (0);
+// }

@@ -6,7 +6,7 @@
 /*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 15:34:52 by gonferna          #+#    #+#             */
-/*   Updated: 2024/01/30 17:18:00 by gonferna         ###   ########.fr       */
+/*   Updated: 2024/02/05 15:56:22 by gonferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,4 +55,17 @@ char    *ft_strjoin(char *line, char *buff)
     new_line[i] = '\0';
     free(line);
     return (new_line);
+}
+
+char    *clean_buff(char *buff)
+{
+    size_t  i;
+    
+    i = 0;
+    while(buff[i] != '\0')
+    {
+        buff[i] = '\0';
+        i++;
+    }
+    return (NULL);
 }
