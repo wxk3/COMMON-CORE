@@ -6,7 +6,7 @@
 /*   By: goncaloferreira <goncaloferreira@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 15:34:52 by gonferna          #+#    #+#             */
-/*   Updated: 2024/02/16 17:20:03 by goncaloferr      ###   ########.fr       */
+/*   Updated: 2024/02/16 17:54:56 by goncaloferr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,14 +61,13 @@ char	*get_next_line(int fd)
 	return (line);
 }
 
-// int main()
+// int	main(void)
 // {
+// 	int fd = open("t.txt", O_RDONLY);
 
-//     int fd = open("t.txt", O_RDONLY);
-
-//     printf("BUFFER_SIZE: %i, fd: %i\n", BUFFER_SIZE, fd);
-//     printf("line: %s", get_next_line(fd));
-//     printf("line: %s", get_next_line(fd));
-//     printf("line: %s", get_next_line(fd));
-//     return (0);
+// 	printf("BUFFER_SIZE: %i, fd: %i\n", BUFFER_SIZE, fd);
+// 	printf("line: %s", get_next_line(fd));
+// 	printf("line: %s", get_next_line(fd));
+// 	printf("line: %s", get_next_line(fd));
+// 	return (0);
 // }
