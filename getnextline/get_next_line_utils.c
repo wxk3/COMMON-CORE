@@ -6,7 +6,7 @@
 /*   By: goncaloferreira <goncaloferreira@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 15:34:52 by gonferna          #+#    #+#             */
-/*   Updated: 2024/02/16 19:23:23 by goncaloferr      ###   ########.fr       */
+/*   Updated: 2024/02/19 17:28:06 by goncaloferr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,7 @@ char	*ft_strjoin(char *line, char *buff)
 
 	new_line = malloc(ft_strlen(buff) + ft_strlen(line) + 1);
 	if (!new_line)
-	{
-		free(line);
-		return (NULL);
-	}
+		return (free(line), NULL);
 	i = 0;
 	while (line && line[i])
 	{
@@ -56,8 +53,7 @@ char	*ft_strjoin(char *line, char *buff)
 			break ;
 	}
 	new_line[i] = '\0';
-	free(line);
-	return (new_line);
+	return (free(line), new_line);
 }
 
 char	*clean_buff(char *buff)
