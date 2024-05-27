@@ -6,11 +6,11 @@
 /*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 12:38:11 by gonferna          #+#    #+#             */
-/*   Updated: 2024/05/22 01:59:48 by gonferna         ###   ########.fr       */
+/*   Updated: 2024/05/27 02:27:57 by gonferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "inc/push_swap.h"
+#include "../inc/push_swap.h"
 
 void	init_stack_a(t_stack_node **a, char **argv)
 {

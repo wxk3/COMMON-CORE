@@ -6,11 +6,11 @@
 /*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 13:02:48 by gonferna          #+#    #+#             */
-/*   Updated: 2024/05/22 01:59:48 by gonferna         ###   ########.fr       */
+/*   Updated: 2024/05/27 02:28:00 by gonferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../inc/push_swap.h"
 
 t_stack_node	find_last(t_stack_node *stack)
 {
@@ -19,4 +19,32 @@ t_stack_node	find_last(t_stack_node *stack)
 	while (stack->next) // loop ate chegar ao fim
 		stack = stack->next;
 	return (stack); // retorna a posiçao do ultimo node
+}
+
+int		stack_len(t_stack_node *stack)
+{
+	int	count;
+	
+	if (!stack)
+		return (0);
+	count = 0;
+	while (stack)
+	{
+		stack = stack->next;
+		count++;
+	}
+	return (count);
+}
+
+bool	stack_sorted(t_stack_node *stack)
+{
+	if (!stack)
+		return (1);
+	while(stack->next)
+	{
+		if (stack->nbr > stack->next->nbr)
+			return (false);
+		stack = stack->next;
+	}
+	return (true);
 }

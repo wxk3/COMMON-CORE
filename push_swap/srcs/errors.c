@@ -6,11 +6,11 @@
 /*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 13:14:20 by gonferna          #+#    #+#             */
-/*   Updated: 2024/05/22 01:59:48 by gonferna         ###   ########.fr       */
+/*   Updated: 2024/05/26 15:02:55 by gonferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../inc/push_swap.h"
 
 int	error_syntax(char *str_n)
 {
@@ -27,4 +27,42 @@ int	error_syntax(char *str_n)
             return (1);
     }
     return (0);
+}
+
+int error_druplicate(t_stack_node *a, int n)
+{
+    if (!a)//check stack
+        return (0);
+    while (a)
+    {
+        if (a->nbr == n)//se o conteudo da stack é igual a n
+            return (1);
+    a = a->next;//proximo
+    }
+    return (0);
+}
+
+void    free_stack(t_stack_node **stack)
+{
+    t_stack_node *tmp;
+    t_stack_node *current;
+
+    if (!stack)
+        return (0);
+    current = stack;
+    while (current)
+    {
+        tmp = current->next;
+        current->nbr = 0;
+        free(current);
+        current = tmp;
+    }
+    *stack = NULL;
+}
+
+void    free_errors(t_stack_node **a)
+{
+    free_stack(a);
+    ft_printf("Error\n");
+    exit(1);
 }

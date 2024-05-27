@@ -6,11 +6,11 @@
 /*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 12:38:02 by gonferna          #+#    #+#             */
-/*   Updated: 2024/05/22 01:59:48 by gonferna         ###   ########.fr       */
+/*   Updated: 2024/05/26 15:02:41 by gonferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../inc/push_swap.h"
 
 int	main(int argc, char **argv)
 {
