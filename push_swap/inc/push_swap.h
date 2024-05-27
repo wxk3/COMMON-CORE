@@ -6,7 +6,7 @@
 /*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 12:38:14 by gonferna          #+#    #+#             */
-/*   Updated: 2024/05/20 12:38:23 by gonferna         ###   ########.fr       */
+/*   Updated: 2024/05/27 15:25:06 by gonferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,13 +32,34 @@ typedef struct s_stack_node
 
 // Handle errors
 
+int	error_syntax(char *str_n);
+int error_druplicate(t_stack_node *a, int n);
+void    free_stack(t_stack_node **stack);
+void    free_errors(t_stack_node **a);
+
 // Stack initiation
+
+void	init_stack_a(t_stack_node **a, char **argv);
+char	**split(char *s, char c);
 
 // Nodes initiation
 
 // Stack utils
 
-// Commands
+t_stack_node	find_last(t_stack_node *stack);
+int		stack_len(t_stack_node *stack);
+bool	stack_sorted(t_stack_node *stack);
+t_stack_node	find_max(t_stack_node *stack);
+t_stack_node	find_min(t_stack_node *stack);
+
+// Moves
+
+void    sa(t_stack_node **a, bool print);
+void    sb(t_stack_node **b, bool print);
+void    ss(t_stack_node **a, t_stack_node **b, bool print);
+void    ra(t_stack_node **a, bool print);
+void    rb(t_stack_node **b, bool print)
+void    rr(t_stack_node **a, t_stack_node **b, bool print);
 
 // Algorithms
 #endif

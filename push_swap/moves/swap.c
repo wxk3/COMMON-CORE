@@ -6,7 +6,7 @@
 /*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/26 16:45:41 by gonferna          #+#    #+#             */
-/*   Updated: 2024/05/27 02:20:20 by gonferna         ###   ########.fr       */
+/*   Updated: 2024/05/27 14:12:50 by gonferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,4 +30,19 @@ void    sa(t_stack_node **a, bool print)
     swap(a);
     if (!print)
         ft_printf("sa\n");
-} 
+}
+
+void    sb(t_stack_node **b, bool print)
+{
+    swap(b);
+    if (!print)
+        ft_printf("sb\n");
+}
+
+void    ss(t_stack_node **a, t_stack_node **b, bool print)
+{
+    swap(a);
+    swap(b);
+    if (!print)
+        ft_printf("ss\n");
+}
