@@ -6,7 +6,7 @@
 /*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 12:38:14 by gonferna          #+#    #+#             */
-/*   Updated: 2024/05/27 15:25:06 by gonferna         ###   ########.fr       */
+/*   Updated: 2024/05/27 22:30:51 by gonferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,9 @@ void    ss(t_stack_node **a, t_stack_node **b, bool print);
 void    ra(t_stack_node **a, bool print);
 void    rb(t_stack_node **b, bool print)
 void    rr(t_stack_node **a, t_stack_node **b, bool print);
+void    rra(t_stack_node **a, bool print);
+void    rrb(t_stack_node **b, bool print);
+void    rrr(t_stack_node **a, t_stack_node **b, bool print);
 
 // Algorithms
 #endif
