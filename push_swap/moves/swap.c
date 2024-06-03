@@ -6,7 +6,7 @@
 /*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/26 16:45:41 by gonferna          #+#    #+#             */
-/*   Updated: 2024/05/27 14:12:50 by gonferna         ###   ########.fr       */
+/*   Updated: 2024/06/03 13:55:48 by gonferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static void     swap(t_stack_node **head)
     if (!*head || !(*head)->next)
         return (0);
     *head = (*head)->next;//O novo head é o valor que estava a seguir ao head original, por ex: A B C, o head era A e agora é B
-    (*head)->prev->prev = *head;//Vai ligar o prev do meu novo head a NULL para ser o primeiro node da stack
+    (*head)->prev->prev = *head;//Vai ligar o prev do meu novo head a A, porque este vai passar a antecede lo
     (*head)->prev->next = (*head)->next;//vai ligar o head original ao no que sucedia o novo head, por exemplo se fosse A B C, ia ficar B A C e esta linha ligava o A ao C.
     if ((*head)->next)
         (*head)->next->prev = (*head)->prev;

@@ -6,7 +6,7 @@
 /*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/29 01:40:58 by gonferna          #+#    #+#             */
-/*   Updated: 2024/05/29 13:27:53 by gonferna         ###   ########.fr       */
+/*   Updated: 2024/06/03 14:08:13 by gonferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,15 @@ void    sort_stacks(t_stack_node **a, t_stack_node **b)
         pb(a, b, false);
     while (len_a-- > 3 && !stack_sorted(*a))
     {
-        
+        init_nodes_a(*a, *b);
+        move_a_to_b(a, b);
     }
+    sort_three(a);
+    while (*b)
+    {
+        init_nodes_b(*a, *b);
+        move_b_to_a(a, b);
+    }
+    current_index(*a);
+    min_on_top(a);
 }
