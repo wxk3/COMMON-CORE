@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: goncaloferreira <goncaloferreira@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/29 13:07:00 by gonferna          #+#    #+#             */
-/*   Updated: 2024/05/29 13:21:27 by gonferna         ###   ########.fr       */
+/*   Updated: 2024/06/05 16:20:37 by goncaloferr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@ static void     push(t_stack_node **dst, t_stack_node **src)
     t_stack_node    *push_node;
     
     if (!*src)
-        return (NULL);
+        return;
     push_node = *src;
-    src* = *src->next;
+    *src = (*src)->next;
     if (*src)
-        *src->prev = NULL;
+        (*src)->prev = NULL;
     push_node->prev = NULL;
     if(!*dst)
     {

@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   stack_utils.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: goncaloferreira <goncaloferreira@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 13:02:48 by gonferna          #+#    #+#             */
-/*   Updated: 2024/05/27 14:10:11 by gonferna         ###   ########.fr       */
+/*   Updated: 2024/06/07 16:50:01 by goncaloferr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
 
-t_stack_node	find_last(t_stack_node *stack)
+t_stack_node	*find_last(t_stack_node *stack)
 {
 	if (!stack)
 		return (NULL);
@@ -49,7 +49,7 @@ bool	stack_sorted(t_stack_node *stack)
 	return (true);
 }
 
-t_stack_node	find_max(t_stack_node *stack)
+t_stack_node	*find_max(t_stack_node *stack)
 {
 	long	max;
 	t_stack_node	*max_node;
@@ -69,7 +69,7 @@ t_stack_node	find_max(t_stack_node *stack)
 	return(max_node);
 }
 
-t_stack_node	find_min(t_stack_node *stack)
+t_stack_node	*find_min(t_stack_node *stack)
 {
 	long	min;
 	t_stack_node	*min_node;

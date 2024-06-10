@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rotate.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: goncaloferreira <goncaloferreira@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/27 15:15:51 by gonferna          #+#    #+#             */
-/*   Updated: 2024/05/27 15:23:13 by gonferna         ###   ########.fr       */
+/*   Updated: 2024/06/05 16:37:40 by goncaloferr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static void    rotate(t_stack_node **stack)
     t_stack_node *last_node;
 
     if (!*stack || !(*stack)->next)
-        return (NULL);
+        return;
     last_node = find_last(*stack);
     last_node->next = *stack;
     *stack = (*stack)->next;

@@ -1,26 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_three.c                                       :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: goncaloferreira <goncaloferreira@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/27 13:50:19 by gonferna          #+#    #+#             */
-/*   Updated: 2024/06/07 16:51:57 by goncaloferr      ###   ########.fr       */
+/*   Created: 2023/10/06 16:47:29 by gonferna          #+#    #+#             */
+/*   Updated: 2023/10/24 16:57:49 by goncaloferr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/push_swap.h"
+#include "libft.h"
 
-void    sort_three(t_stack_node **a)
+int	ft_isprint(int c)
 {
-    t_stack_node *biggest_node;
-    
-    biggest_node = find_max(*a);
-    if (biggest_node == *a)
-        ra(a, false);
-    else if ((*a)->next == biggest_node)
-        rra(a, false);
-    if ((*a)->nbr > (*a)->next->nbr)
-        sa(a, false);
+	if (c >= 32 && c <= 126)
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
 }
+/*int	main(void)
+{
+	int	a = 'a';
+	int	b = '1';
+	int	c = '.';
+	int	d = 129;
+
+	printf("%i\n", ft_isprint(a));
+	printf("%i\n", ft_isprint(b));
+	printf("%i\n", ft_isprint(c));
+	printf("%i\n", ft_isprint(d));
+}*/

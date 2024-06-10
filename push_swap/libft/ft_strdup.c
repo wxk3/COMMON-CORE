@@ -1,26 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_three.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: goncaloferreira <goncaloferreira@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/27 13:50:19 by gonferna          #+#    #+#             */
-/*   Updated: 2024/06/07 16:51:57 by goncaloferr      ###   ########.fr       */
+/*   Created: 2023/10/17 14:18:29 by gonferna          #+#    #+#             */
+/*   Updated: 2023/10/25 18:32:57 by goncaloferr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/push_swap.h"
+#include "libft.h"
 
-void    sort_three(t_stack_node **a)
+char	*ft_strdup(const char *s)
 {
-    t_stack_node *biggest_node;
-    
-    biggest_node = find_max(*a);
-    if (biggest_node == *a)
-        ra(a, false);
-    else if ((*a)->next == biggest_node)
-        rra(a, false);
-    if ((*a)->nbr > (*a)->next->nbr)
-        sa(a, false);
+	char	*duplicate;
+
+	duplicate = malloc(sizeof(char) * (ft_strlen(s) + 1));
+	if (duplicate == NULL)
+	{
+		return (NULL);
+	}
+	ft_memcpy(duplicate, s, ft_strlen(s) + 1);
+	return (duplicate);
 }
+/*int	main(void)
+{
+	char	s[] = "este texto é da string s";
+	char	*duplicate;
+	
+	duplicate = ft_strdup(s);
+	printf("String duplicada: %s\n", duplicate);
+}*/

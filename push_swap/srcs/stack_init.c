@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack_init.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: goncaloferreira <goncaloferreira@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 12:38:11 by gonferna          #+#    #+#             */
-/*   Updated: 2024/05/27 02:27:57 by gonferna         ###   ########.fr       */
+/*   Updated: 2024/06/10 12:46:40 by goncaloferr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	init_stack_a(t_stack_node **a, char **argv)
 	while (argv[i])
 	{
 		if (error_syntax(argv[i])) // verificar erros de syntax
-			free_erros(a);
+			free_errors(a);
 		n = ft_atol(argv[i]);
 		// converter o argumento argv para long inteter
 		if (n > INT_MAX || n < INT_MIN) // limitar o long int
@@ -35,8 +35,7 @@ void	init_stack_a(t_stack_node **a, char **argv)
 static void	append_node(t_stack_node **stack, int n)
 {
 	t_stack_node	*last_node;
-
-	t_stack_node *node; // criar novo node para guardar o valor do novo n
+	t_stack_node	*node; // criar novo node para guardar o valor do novo n
 	// node para apontar para o ultimo node ao chamar a funçao find_last
 	if (!*stack) // verificar se a stack é valida
 		return ;
@@ -81,4 +80,31 @@ static long	ft_atol(const char *s) // função que vai transformar um valor em l
 		// enquanto na string so estiverem digitos
 		result = result * 10 + (*s++ - '0'); //é * 10 para criar espaço para somar o valor char o valor da subtração do valor de char por '0'
 	return (result * sign);
+}
+
+t_stack_node	*get_cheapest(t_stack_node *stack)
+{
+	if(!stack)
+		return (NULL);
+	while (stack)
+	{
+		if (stack->cheapest)
+			return (stack);
+		stack = stack->next;
+	}
+	return (NULL);
+}
+
+void	prep_for_push(t_stack_node **stack, t_stack_node *top_node, char stack_name)
+{
+	while (*stack != top_node)
+	{
+		if (stack_name == 'a')
+		{
+			if (top_node->above_median)
+				ra(stack, false);
+			else
+				rra(stack, false);
+		}
+	}
 }

@@ -1,26 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_three.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: goncaloferreira <goncaloferreira@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/27 13:50:19 by gonferna          #+#    #+#             */
-/*   Updated: 2024/06/07 16:51:57 by goncaloferr      ###   ########.fr       */
+/*   Created: 2023/10/11 16:16:46 by gonferna          #+#    #+#             */
+/*   Updated: 2023/10/25 18:51:47 by goncaloferr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/push_swap.h"
+#include "libft.h"
 
-void    sort_three(t_stack_node **a)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-    t_stack_node *biggest_node;
-    
-    biggest_node = find_max(*a);
-    if (biggest_node == *a)
-        ra(a, false);
-    else if ((*a)->next == biggest_node)
-        rra(a, false);
-    if ((*a)->nbr > (*a)->next->nbr)
-        sa(a, false);
+	int	n;
+
+	n = 0;
+	while (s[n] != '\0')
+	{
+		f(n, &s[n]);
+		n++;
+	}
 }
+
+/*void print_string(unsigned int index, char *c)
+{
+    printf("Caractere na posição %u: %c\n", index, *c);
+}
+
+int main(void)
+{
+    char s[] = "teste teste TESTE";
+
+    ft_striteri(s, print_string);
+
+    return 0;
+}*/

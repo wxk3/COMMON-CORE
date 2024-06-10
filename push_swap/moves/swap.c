@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   swap.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: goncaloferreira <goncaloferreira@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/26 16:45:41 by gonferna          #+#    #+#             */
-/*   Updated: 2024/06/03 13:55:48 by gonferna         ###   ########.fr       */
+/*   Updated: 2024/06/07 16:52:27 by goncaloferr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static void     swap(t_stack_node **head)
 {
     if (!*head || !(*head)->next)
-        return (0);
+        return;
     *head = (*head)->next;//O novo head é o valor que estava a seguir ao head original, por ex: A B C, o head era A e agora é B
     (*head)->prev->prev = *head;//Vai ligar o prev do meu novo head a A, porque este vai passar a antecede lo
     (*head)->prev->next = (*head)->next;//vai ligar o head original ao no que sucedia o novo head, por exemplo se fosse A B C, ia ficar B A C e esta linha ligava o A ao C.

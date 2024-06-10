@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_three.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: goncaloferreira <goncaloferreira@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/27 13:50:19 by gonferna          #+#    #+#             */
-/*   Updated: 2024/06/07 16:51:57 by goncaloferr      ###   ########.fr       */
+/*   Created: 2023/10/17 16:38:43 by gonferna          #+#    #+#             */
+/*   Updated: 2023/10/24 17:25:39 by goncaloferr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/push_swap.h"
+#include "libft.h"
 
-void    sort_three(t_stack_node **a)
+void	ft_putstr_fd(char *s, int fd)
 {
-    t_stack_node *biggest_node;
-    
-    biggest_node = find_max(*a);
-    if (biggest_node == *a)
-        ra(a, false);
-    else if ((*a)->next == biggest_node)
-        rra(a, false);
-    if ((*a)->nbr > (*a)->next->nbr)
-        sa(a, false);
+	int	i;
+
+	i = 0;
+	while (s[i] != '\0')
+	{
+		write(fd, &s[i], 1);
+		i++;
+	}
 }
+/*int	main(void)
+{
+	char	s[] = "olha a string";
+	ft_putstr_fd(s, 1);
+}*/

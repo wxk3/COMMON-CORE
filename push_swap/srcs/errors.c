@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   errors.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: goncaloferreira <goncaloferreira@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 13:14:20 by gonferna          #+#    #+#             */
-/*   Updated: 2024/05/26 15:02:55 by gonferna         ###   ########.fr       */
+/*   Updated: 2024/06/10 12:56:02 by goncaloferr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	error_syntax(char *str_n)
     return (0);
 }
 
-int error_druplicate(t_stack_node *a, int n)
+int error_duplicate(t_stack_node *a, int n)
 {
     if (!a)//check stack
         return (0);
@@ -48,8 +48,8 @@ void    free_stack(t_stack_node **stack)
     t_stack_node *current;
 
     if (!stack)
-        return (0);
-    current = stack;
+        return;
+    current = *stack;
     while (current)
     {
         tmp = current->next;

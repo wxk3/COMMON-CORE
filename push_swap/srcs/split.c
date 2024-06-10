@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   split.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: goncaloferreira <goncaloferreira@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 12:38:09 by gonferna          #+#    #+#             */
-/*   Updated: 2024/05/26 15:02:18 by gonferna         ###   ########.fr       */
+/*   Updated: 2024/06/07 16:56:24 by goncaloferr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,7 @@ char	**split(char *s, char c) // Esta função vai retonrar as subsstring de uma
 		exit(1);
 	array = malloc(sizeof(char *) * (size_t)(word_count + 2)); // alocar espaço para o array com o valor do word_count mais 2 slots, 1 para o caracter nulo da ultima string e outro para o valor nulo do array
 	if (!array) // verificar se o alocamento foi valido
+		while (array[i])
 		return (NULL);
 	while (word_count-- >= 0) // percorrer de forma decrescente o array
 	{
@@ -84,9 +85,8 @@ char	**split(char *s, char c) // Esta função vai retonrar as subsstring de uma
 		}
 		array[i++] = get_next_word(s, c); // copiar string a string usando a função get_next_word
 	}
-	array[i] = '\0'; // igualar nulo no final
+	array[i] = NULL; // igualar nulo no final
 	return (array); // retornar
-    free(array);
 }
 // int main() {
 //     char s[] = "Isto e um teste";
