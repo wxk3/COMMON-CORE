@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: goncaloferreira <goncaloferreira@studen    +#+  +:+       +#+        */
+/*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 12:38:14 by gonferna          #+#    #+#             */
-/*   Updated: 2024/06/10 12:53:56 by goncaloferr      ###   ########.fr       */
+/*   Updated: 2024/06/11 12:45:05 by gonferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include "../libft/libft.h"
-# include "../printf/ft_printf.h"
+# include "../libft/inc/libft.h"
+# include "../libft/inc/ft_printf.h"
 # include <limits.h>
 # include <stdbool.h>
 
@@ -30,7 +30,7 @@ typedef struct s_stack_node
 	struct s_stack_node	*prev;
 }						t_stack_node;
 
-// Handle errors
+// errors
 
 int	error_syntax(char *str_n);
 int error_duplicate(t_stack_node *a, int n);
