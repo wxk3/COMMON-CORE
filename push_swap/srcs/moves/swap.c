@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   swap.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: goncaloferreira <goncaloferreira@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/26 16:45:41 by gonferna          #+#    #+#             */
-/*   Updated: 2024/06/11 13:00:48 by gonferna         ###   ########.fr       */
+/*   Updated: 2024/06/11 15:34:42 by goncaloferr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/push_swap.h"
 
-static void swap(t_stack_node **head)
+static void	swap(t_stack_node **head)
 {
 	if (!*head || !(*head)->next)
-		return;
+		return ;
 	*head = (*head)->next;
 	(*head)->prev->prev = *head;
 	(*head)->prev->next = (*head)->next;
@@ -25,21 +25,21 @@ static void swap(t_stack_node **head)
 	(*head)->prev = NULL;
 }
 
-void sa(t_stack_node **a, bool print)
+void	sa(t_stack_node **a, bool print)
 {
 	swap(a);
 	if (!print)
 		ft_printf("sa\n");
 }
 
-void sb(t_stack_node **b, bool print)
+void	sb(t_stack_node **b, bool print)
 {
 	swap(b);
 	if (!print)
 		ft_printf("sb\n");
 }
 
-void ss(t_stack_node **a, t_stack_node **b, bool print)
+void	ss(t_stack_node **a, t_stack_node **b, bool print)
 {
 	swap(a);
 	swap(b);

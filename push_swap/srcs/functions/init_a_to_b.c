@@ -3,23 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   init_a_to_b.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: goncaloferreira <goncaloferreira@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/03 14:09:58 by gonferna          #+#    #+#             */
-/*   Updated: 2024/06/11 13:02:38 by gonferna         ###   ########.fr       */
+/*   Updated: 2024/06/11 15:31:24 by goncaloferr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/push_swap.h"
 
-void current_index(t_stack_node *stack)
+void	current_index(t_stack_node *stack)
 {
 	int	i;
 	int	median;
 
 	i = 0;
 	if (!stack)
-		return;
+		return ;
 	median = stack_len(stack) / 2;
 	while (stack)
 	{
@@ -30,7 +30,7 @@ void current_index(t_stack_node *stack)
 	}
 }
 
-static void set_target_a(t_stack_node *a, t_stack_node *b)
+static void	set_target_a(t_stack_node *a, t_stack_node *b)
 {
 	t_stack_node	*current_b;
 	t_stack_node	*target_node;
@@ -54,7 +54,7 @@ static void set_target_a(t_stack_node *a, t_stack_node *b)
 	}
 }
 
-static void cost_analysis_a(t_stack_node *a, t_stack_node *b)
+static void	cost_analysis_a(t_stack_node *a, t_stack_node *b)
 {
 	int	len_a;
 	int	len_b;
@@ -74,13 +74,13 @@ static void cost_analysis_a(t_stack_node *a, t_stack_node *b)
 	}
 }
 
-void set_cheapest(t_stack_node *stack)
+void	set_cheapest(t_stack_node *stack)
 {
 	long			cheapest_value;
 	t_stack_node	*cheapest_node;
 
 	if (!stack)
-		return;
+		return ;
 	cheapest_value = LONG_MAX;
 	while (stack)
 	{
@@ -94,7 +94,7 @@ void set_cheapest(t_stack_node *stack)
 	cheapest_node->cheapest = true;
 }
 
-void init_nodes_a(t_stack_node *a, t_stack_node *b)
+void	init_nodes_a(t_stack_node *a, t_stack_node *b)
 {
 	current_index(a);
 	current_index(b);

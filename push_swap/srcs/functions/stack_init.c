@@ -3,16 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   stack_init.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: goncaloferreira <goncaloferreira@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 12:38:11 by gonferna          #+#    #+#             */
-/*   Updated: 2024/06/11 14:09:55 by gonferna         ###   ########.fr       */
+/*   Updated: 2024/06/11 15:32:00 by goncaloferr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/push_swap.h"
 
-static long	ft_atol(const char *s) // função que vai transformar um valor em long int
+static long	ft_atol(const char *s)
+	// função que vai transformar um valor em long int
 {
 	long result; // retorno
 	int sign;    // manipulação do sinal
@@ -28,16 +29,18 @@ static long	ft_atol(const char *s) // função que vai transformar um valor em l
 			sign = -1;
 		s++; // caso contrario apenas segue a string
 	}
-	while (ft_isdigit(*s))                  
+	while (ft_isdigit(*s))
 		// enquanto na string so estiverem digitos
-		result = result * 10 + (*s++ - '0'); //é * 10 para criar espaço para somar o valor char o valor da subtração do valor de char por '0'
+		result = result * 10 + (*s++ - '0'); //é
+			* 10 para criar espaço para somar o valor char o valor da subtração do valor de char por '0'
 	return (result * sign);
 }
 
 static void	append_node(t_stack_node **stack, int n)
 {
 	t_stack_node	*last_node;
-	t_stack_node	*node; // criar novo node para guardar o valor do novo n
+
+	t_stack_node *node; // criar novo node para guardar o valor do novo n
 	// node para apontar para o ultimo node ao chamar a funçao find_last
 	if (!stack) // verificar se a stack é valida
 		return ;
@@ -66,7 +69,6 @@ void	init_stack_a(t_stack_node **a, char **argv)
 {
 	long n; // vai guardar o resultado
 	int i;  // vai percorrer a array de numeros
-	
 	i = 0;
 	while (argv[i])
 	{
@@ -85,7 +87,7 @@ void	init_stack_a(t_stack_node **a, char **argv)
 
 t_stack_node	*get_cheapest(t_stack_node *stack)
 {
-	if(!stack)
+	if (!stack)
 		return (NULL);
 	while (stack)
 	{
@@ -96,7 +98,8 @@ t_stack_node	*get_cheapest(t_stack_node *stack)
 	return (NULL);
 }
 
-void	prep_for_push(t_stack_node **stack, t_stack_node *top_node, char stack_name)
+void	prep_for_push(t_stack_node **stack, t_stack_node *top_node,
+		char stack_name)
 {
 	while (*stack != top_node)
 	{
@@ -113,6 +116,6 @@ void	prep_for_push(t_stack_node **stack, t_stack_node *top_node, char stack_name
 				rb(stack, false);
 			else
 				rrb(stack, false);
-		}	
+		}
 	}
 }
