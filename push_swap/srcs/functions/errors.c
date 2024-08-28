@@ -6,7 +6,7 @@
 /*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 13:14:20 by gonferna          #+#    #+#             */
-/*   Updated: 2024/08/28 17:39:50 by root             ###   ########.fr       */
+/*   Updated: 2024/08/28 17:49:03 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ void	free_errors(t_stack_node **a)
 	exit(1);
 }
 
-static void	init_node(t_stack_node *node, int n)
+void	init_node(t_stack_node *node, int n)
 {
 	node->nbr = n;
 	node->index = -1;
