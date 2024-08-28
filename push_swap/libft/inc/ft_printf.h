@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 15:39:32 by gonferna          #+#    #+#             */
-/*   Updated: 2024/06/11 15:39:33 by gonferna         ###   ########.fr       */
+/*   Updated: 2024/08/28 17:34:03 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int		ft_handle_pointer(va_list ap);
 int		ft_handle_hexlower(va_list ap);
 int		ft_handle_hexupper(va_list ap);
 int		ft_handle_percent(void);
-int		ft_putchar(char c); 
+int		ft_putchar(char c);
 int		ft_putnbr_base(unsigned long long nb, const char *base);
 
 #endif

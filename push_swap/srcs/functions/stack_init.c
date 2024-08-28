@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack_init.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 12:38:11 by gonferna          #+#    #+#             */
-/*   Updated: 2024/06/11 16:23:22 by gonferna         ###   ########.fr       */
+/*   Updated: 2024/08/28 17:39:16 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,7 @@ static void	append_node(t_stack_node **stack, int n)
 	node = malloc(sizeof(t_stack_node));
 	if (!node)
 		return ;
-	node->next = NULL;
-	node->nbr = n;
+	init_node(node, n);
 	if (!(*stack))
 	{
 		*stack = node;

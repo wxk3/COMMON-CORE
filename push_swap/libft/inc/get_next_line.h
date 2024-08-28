@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 15:39:35 by gonferna          #+#    #+#             */
-/*   Updated: 2024/06/11 15:39:36 by gonferna         ###   ########.fr       */
+/*   Updated: 2024/08/28 17:34:10 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,6 @@
 char	*process_line(char **stash);
 char	*read_from_fd(int fd);
 char	*get_next_line_helper(char **stash, int fd);
-char	*get_next_line_bonus(int fd); 
+char	*get_next_line_bonus(int fd);
 
 #endif

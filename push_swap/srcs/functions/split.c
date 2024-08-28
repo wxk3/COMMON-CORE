@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   split.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 12:38:09 by gonferna          #+#    #+#             */
-/*   Updated: 2024/06/12 12:32:49 by gonferna         ###   ########.fr       */
+/*   Updated: 2024/08/28 17:40:14 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,9 +95,9 @@ void	free_split(char **argv)
 	int		i;
 
 	i = 0;
-	if (argv) 
+	if (argv)
 	{
-		while (argv[i]) 
+		while (argv[i])
 		{
 			free(argv[i]);
 			i++;

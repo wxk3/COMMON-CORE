@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 12:38:02 by gonferna          #+#    #+#             */
-/*   Updated: 2024/06/12 12:29:44 by gonferna         ###   ########.fr       */
+/*   Updated: 2024/08/28 16:58:04 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,5 @@ int	main(int argc, char **argv)
 			sort_stacks(&a, &b);
 	}
 	free_stack(&a);
-	free_split(argv);
 	return (0);
 }

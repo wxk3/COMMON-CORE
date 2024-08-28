@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 15:41:18 by gonferna          #+#    #+#             */
-/*   Updated: 2024/06/11 15:41:19 by gonferna         ###   ########.fr       */
+/*   Updated: 2024/08/28 17:33:05 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ static int	ft_specifier(char c, va_list ap)
 int	ft_printf(const char *format, ...)
 {
 	va_list	ap;
-	int		count; 
+	int		count;
 
 	if (!format)
 		return (0);

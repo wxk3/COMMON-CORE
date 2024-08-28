@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   errors.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 13:14:20 by gonferna          #+#    #+#             */
-/*   Updated: 2024/06/11 15:42:50 by gonferna         ###   ########.fr       */
+/*   Updated: 2024/08/28 17:39:50 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,4 +63,16 @@ void	free_errors(t_stack_node **a)
 	free_stack(a);
 	ft_printf("Error\n");
 	exit(1);
+}
+
+static void	init_node(t_stack_node *node, int n)
+{
+	node->nbr = n;
+	node->index = -1;
+	node->push_cost = 0;
+	node->above_median = false;
+	node->cheapest = false;
+	node->target_node = NULL;
+	node->next = NULL;
+	node->prev = NULL;
 }

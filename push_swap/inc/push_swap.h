@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 12:38:14 by gonferna          #+#    #+#             */
-/*   Updated: 2024/06/12 12:28:20 by gonferna         ###   ########.fr       */
+/*   Updated: 2024/08/28 17:37:34 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ void					free_split(char **argv);
 
 void					init_stack_a(t_stack_node **a, char **argv);
 char					**split(char *s, char c);
+static void				init_node(t_stack_node *node, int n);
 
 // Nodes initiation
 

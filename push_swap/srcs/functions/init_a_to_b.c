@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_a_to_b.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gonferna <gonferna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: root <root@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/03 14:09:58 by gonferna          #+#    #+#             */
-/*   Updated: 2024/06/11 16:27:38 by gonferna         ###   ########.fr       */
+/*   Updated: 2024/08/28 17:40:25 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ static void	set_target_a(t_stack_node *a, t_stack_node *b)
 		current_b = b;
 		while (current_b)
 		{
-			if (current_b->nbr < a->nbr 
+			if (current_b->nbr < a->nbr
 				&& current_b->nbr > best_match_index)
 			{
 				best_match_index = current_b->nbr;
